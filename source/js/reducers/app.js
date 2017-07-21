@@ -1,4 +1,5 @@
 import { Map } from 'immutable';
+import api from '../api';
 
 import {
   SEARCH_RESTAURANTS
@@ -16,7 +17,8 @@ export default function(state = initialState, action) {
     case SEARCH_RESTAURANTS:
 
       // Run function to fetch zomato data here and return promise to restaurant below.
-
+      // let promise = api.getZomatoRestaurants();
+      
       return Object.assign({}, state, {
         restaurants: action.payload
       })

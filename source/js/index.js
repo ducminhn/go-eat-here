@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware, compose } from 'redux';
 import thunk from 'redux-thunk';
+import ReduxPromise from 'redux-promise';
 import 'babel-polyfill';
 import logger from 'dev/logger';
 
@@ -20,7 +21,7 @@ let store = null;
 
 if (isProduction) {
   // In production adding only thunk middleware
-  const middleware = applyMiddleware(thunk);
+  const middleware = applyMiddleware(thunk, ReduxPromise);
 
   store = createStore(
     rootReducer,
