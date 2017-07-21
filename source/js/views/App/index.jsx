@@ -3,15 +3,18 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
 import Dashboard from 'views/Dashboard';
-import About from 'views/About';
-import NotFound from 'views/NotFound';
+import HomePage from 'views/Home.view';
+import NotFound from 'views/NotFound.view';
 import Menu from 'components/Global/Menu';
+import Map from 'views/Map.view';
+import Categories from 'views/Categories.view';
 
 const publicPath = '/';
 
 export const routeCodes = {
-  DASHBOARD: publicPath,
-  ABOUT: `${ publicPath }about`,
+  HOME: publicPath,
+  CATEGORIES: `${ publicPath }categories`,
+  MAP: `${ publicPath }map`,
 };
 
 export default class App extends Component {
@@ -23,18 +26,12 @@ export default class App extends Component {
     return (
       <BrowserRouter>
         <div className='App'>
-          <div className="row">
-            <div className="col-2">
-              <Menu />
-            </div>
-            <div className="col-10">
-              <Switch>
-                <Route exact path={ publicPath } component={ Dashboard } />
-                <Route path={ routeCodes.ABOUT } component={ About } />
-                <Route path='*' component={ NotFound } />
-              </Switch>
-            </div>
-          </div>
+          <Switch>
+            <Route exact path={ publicPath } component={ HomePage } />
+            <Route path={ routeCodes.CATEGORIES } component={ Categories } />
+            <Route path={ routeCodes.MAP } component={ Map } />
+            <Route path='*' component={ NotFound } />
+          </Switch>
         </div>
       </BrowserRouter>
     );

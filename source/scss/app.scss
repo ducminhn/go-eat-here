@@ -2,7 +2,9 @@
 @import "base/breakpoints";
 @import "base/app";
 
-
+.App{
+    height: 100vh;
+}
 .map{
     height: 100vh;
 }

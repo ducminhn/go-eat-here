@@ -17,7 +17,7 @@ function createMapOptions(maps) {
   }
 }
 
-class Dashboard extends Component {
+class Map extends Component {
   static propTypes = {
     asyncData: PropTypes.string,
     asyncError: PropTypes.object,
@@ -81,4 +81,4 @@ function mapStateToProps({}){
   return{}
 }
 
-export default connect(mapStateToProps, actions)(Dashboard);
+export default connect(mapStateToProps, actions)(Map);
