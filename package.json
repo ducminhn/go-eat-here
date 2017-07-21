@@ -53,8 +53,10 @@
     "webpack-dev-server": "^2.2.1"
   },
   "dependencies": {
+    "@mapbox/point-geometry": "^0.1.0",
     "babel-polyfill": "^6.23.0",
     "es6-promise": "^3.3.1",
+    "google-map-react": "^0.24.0",
     "immutable": "^3.8.1",
     "isomorphic-fetch": "^2.2.1",
     "prop-types": "^15.5.10",
@@ -64,7 +66,8 @@
     "react-router": "^4.1.1",
     "react-router-dom": "^4.1.1",
     "redux": "^3.6.0",
-    "redux-thunk": "^2.2.0"
+    "redux-thunk": "^2.2.0",
+    "zomato": "^1.1.0"
   },
   "description": "Starter boilerplate for React and Redux, using Webpack 2",
   "repository": {

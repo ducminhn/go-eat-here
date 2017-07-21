@@ -23,13 +23,17 @@ export default class App extends Component {
     return (
       <BrowserRouter>
         <div className='App'>
-          <Menu />
-          <div className='Page'>
-            <Switch>
-              <Route exact path={ publicPath } component={ Dashboard } />
-              <Route path={ routeCodes.ABOUT } component={ About } />
-              <Route path='*' component={ NotFound } />
-            </Switch>
+          <div className="row">
+            <div className="col-2">
+              <Menu />
+            </div>
+            <div className="col-10">
+              <Switch>
+                <Route exact path={ publicPath } component={ Dashboard } />
+                <Route path={ routeCodes.ABOUT } component={ About } />
+                <Route path='*' component={ NotFound } />
+              </Switch>
+            </div>
           </div>
         </div>
       </BrowserRouter>

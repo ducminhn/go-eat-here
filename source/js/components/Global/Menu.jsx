@@ -1,31 +1,29 @@
 import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
 import { routeCodes } from '../../views/App';
-import workAndCoLogoImg from '../../../assets/img/workco-logo.svg';
+import driveLogo from '../../../assets/img/logo.png';
 
 export default class Menu extends Component {
   render() {
     return (
-      <div className='Menu'>
-        <div className='Menu-logo'>
-          <img
-            src={ workAndCoLogoImg }
-            alt='Work & Co logo'
-          />
-        </div>
+      <div>
+        <img
+          src={driveLogo}
+          alt='Work & Co logo'
+        />
         <div className='Menu-links'>
           <NavLink
             activeClassName='Menu-link--active'
             className='Menu-link'
             exact
-            to={ routeCodes.DASHBOARD }
+            to={routeCodes.DASHBOARD}
           >
             Home
           </NavLink>
           <NavLink
             activeClassName='Menu-link--active'
             className='Menu-link'
-            to={ routeCodes.ABOUT }
+            to={routeCodes.ABOUT}
           >
             About
           </NavLink>
