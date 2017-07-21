@@ -13,16 +13,16 @@ class HomePage extends Component {
     }
 
     componentWillMount(){}
-    
+
 
     componentDidMount(){}
 
-    fetchData(){
-        for (var index = 0; index < 5; index++) {            
-            this.props.searchRestaurants(index * 20);
-        }        
+    fetchData(latitude, longitude){
+        for (var index = 0; index < 5; index++) {
+            this.props.searchRestaurants(index * 20, latitude, longitude);
+        }
     }
-    
+
     render() {
         return (
             <div className="bg-primary text-center d-flex h-100 align-items-center">
@@ -34,8 +34,7 @@ class HomePage extends Component {
                                 className="form-control w-75 mx-auto p-4 mt-5"
                                 style={{ width: '90%' }}
                                 onPlaceSelected={(place) => {
-                                    console.log(place);
-                                    this.fetchData();
+                                    this.fetchData(place.geometry.location.lat(), place.geometry.location.lng());
                                     this.props.history.push('/categories/');
                                 }}
                                 types={['address']}
