@@ -35,7 +35,7 @@ class HomePage extends Component {
                                     console.log(place);
                                     this.fetchData();
                                 }}
-                                types={'(address)'}
+                                types={['address']}
                                 componentRestrictions={{country: "ca"}}
                             />
                         </div>
