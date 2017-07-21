@@ -26,13 +26,14 @@ class HomePage extends Component {
                 <div className="container">
                     <div className="row p-1">
                         <div className="col-lg-12">
-                            <h1 className="display-1 text-white">Where do you want to eat?</h1>                            
+                            <h1 className="display-1 text-white">Where do you want to eat?</h1>
                             <Autocomplete
                                 className="form-control w-75 mx-auto p-4 mt-5"
                                 style={{ width: '90%' }}
                                 onPlaceSelected={(place) => {
                                     console.log(place);
                                 }}
+                                types={'(address)'}
                             />
                         </div>
                     </div>
