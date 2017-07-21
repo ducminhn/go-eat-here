@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
-import Dashboard from 'views/Dashboard';
 import HomePage from 'views/Home.view';
 import NotFound from 'views/NotFound.view';
 import Menu from 'components/Global/Menu';

@@ -8,7 +8,7 @@ import logger from 'dev/logger';
 
 import rootReducer from 'reducers';
 
-import App from 'views/App';
+import App from 'views/App.view';
 
 // Load SCSS
 import '../scss/app.scss';

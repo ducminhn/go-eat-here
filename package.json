@@ -54,6 +54,7 @@
   },
   "dependencies": {
     "@mapbox/point-geometry": "^0.1.0",
+    "axios": "^0.16.2",
     "babel-polyfill": "^6.23.0",
     "es6-promise": "^3.3.1",
     "google-map-react": "^0.24.0",

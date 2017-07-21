@@ -11,6 +11,15 @@ class HomePage extends Component {
 
     }
 
+    componentWillMount(){
+        this.props.searchRestaurants();
+    }
+
+    componentDidMount(){
+
+        console.log(this.props);
+    }
+
     render() {
         return (
             <div className="bg-primary text-center d-flex h-100 align-items-center">
@@ -33,8 +42,10 @@ class HomePage extends Component {
     }
 }
 
-function mapStateToProps({ }) {
-    return {}
+function mapStateToProps({ app_data }) {
+    return {
+        restaurants: app_data.restaurants
+    }
 }
 
 export default connect(mapStateToProps, actions)(HomePage);
