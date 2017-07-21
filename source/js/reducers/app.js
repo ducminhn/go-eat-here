@@ -6,21 +6,15 @@ import {
 } from 'actions/app';
 
 const initialState = {
-  restaurants: [{
-    name: "Urban Fare",
-    location: "ABCD"
-  }]
+  restaurants: []
 };
 
 export default function(state = initialState, action) {
   switch (action.type) {
     case SEARCH_RESTAURANTS:
-
-      // Run function to fetch zomato data here and return promise to restaurant below.
-      // let promise = api.getZomatoRestaurants();
-      
+      console.log(action.payload);
       return Object.assign({}, state, {
-        restaurants: action.payload
+        restaurants: action.payload.data
       })
       break;
   }

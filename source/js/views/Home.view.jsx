@@ -9,17 +9,18 @@ class HomePage extends Component {
     constructor(props) {
         super(props);
 
+        this.fetchData = this.fetchData.bind(this);
     }
 
-    componentWillMount(){
+    componentWillMount(){}
+    
+
+    componentDidMount(){}
+
+    fetchData(){
         this.props.searchRestaurants();
     }
-
-    componentDidMount(){
-
-        console.log(this.props.restaurants);
-    }
-
+    
     render() {
         return (
             <div className="bg-primary text-center d-flex h-100 align-items-center">
@@ -32,6 +33,7 @@ class HomePage extends Component {
                                 style={{ width: '90%' }}
                                 onPlaceSelected={(place) => {
                                     console.log(place);
+                                    this.fetchData();
                                 }}
                             />
                         </div>

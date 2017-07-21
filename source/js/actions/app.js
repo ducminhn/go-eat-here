@@ -1,17 +1,12 @@
-import api from 'api';
+import api from '../api';
 
 export const SEARCH_RESTAURANTS = 'SEARCH_RESTAURANTS';
 
 export function searchRestaurants(){
-  let restaurants = [
-    {
-      name: "Urban Fare",
-      locatoin: "ALSKSLK"
-    }
-  ];
+  const promise = api.getZomatoRestaurants();
   return{
     type: SEARCH_RESTAURANTS,
-    payload: restaurants
+    payload: promise
   }
 }
 
