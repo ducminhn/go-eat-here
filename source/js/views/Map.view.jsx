@@ -18,15 +18,6 @@ function createMapOptions(maps) {
 }
 
 class Map extends Component {
-  static propTypes = {
-    asyncData: PropTypes.string,
-    asyncError: PropTypes.object,
-    asyncLoading: PropTypes.bool,
-    counter: PropTypes.number,
-    mapProperty: PropTypes.object,
-    // from react-redux connect
-    dispatch: PropTypes.func,
-  }
 
   static defaultProps = {
     // 49.2754111,-123.1248643 Yaletown Coordinate
@@ -34,35 +25,13 @@ class Map extends Component {
     zoom: 14
   };
 
-  constructor() {
-    super();
-
-    this.handleAsyncButtonClick = this.handleAsyncButtonClick.bind(this);
-    this.handleTestButtonClick = this.handleTestButtonClick.bind(this);
-
+  constructor(props) {
+    super(props);
     
   }
 
-  handleAsyncButtonClick() {
-    const { dispatch } = this.props;
-
-    dispatch(testAsync());
-  }
-
-  handleTestButtonClick() {
-    const { dispatch } = this.props;
-
-    dispatch(testAction());
-  }
-
   render() {
-    const {
-      asyncData,
-      asyncError,
-      asyncLoading,
-      counter
-    } = this.props;
-
+    console.log(this.props.selected_category);
     return (
       <div className="map">
         <GoogleMapReact
@@ -77,8 +46,11 @@ class Map extends Component {
   }
 }
 
-function mapStateToProps({}){
-  return{}
+function mapStateToProps({ app_data }){
+  return{
+    restaurants: app_data.restaurants,
+    selected_category: app_data.selected_category
+  }
 }
 
 export default connect(mapStateToProps, actions)(Map);

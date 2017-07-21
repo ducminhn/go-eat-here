@@ -20,6 +20,7 @@ function getZomatoRestaurants(offset) {
   return promise;
 }
 
+
 export default {
   getZomatoRestaurants,
 };
