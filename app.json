@@ -1,0 +1,7 @@
+{
+  "name": "Go Eat Here App",
+  "description": "A ReactJS app created in Drive Hackathon day.",
+  "repository": "https://github.com/ducminhn/go-eat-here",
+  "logo": "https://github.com/ducminhn/go-eat-here/logo.png",
+  "keywords": ["react", "static"]
+}

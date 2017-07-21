@@ -21,6 +21,7 @@ Name comes from a fictional character [Marvin](https://en.wikipedia.org/wiki/Mar
 * [Git hooks](#user-content-git-hooks)
 * [Changelog](#user-content-changelog)
 
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
 
 ## What is this?
 
