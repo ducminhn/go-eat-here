@@ -18,7 +18,9 @@ class HomePage extends Component {
     componentDidMount(){}
 
     fetchData(){
-        this.props.searchRestaurants();
+        for (var index = 0; index < 5; index++) {            
+            this.props.searchRestaurants(index * 20);
+        }        
     }
     
     render() {
@@ -34,6 +36,7 @@ class HomePage extends Component {
                                 onPlaceSelected={(place) => {
                                     console.log(place);
                                     this.fetchData();
+                                    this.props.history.push('/categories/');
                                 }}
                                 types={['address']}
                                 componentRestrictions={{country: "ca"}}

@@ -23,7 +23,7 @@ export default class App extends Component {
 
   render() {
     return (
-      <BrowserRouter>
+      <BrowserRouter history={ history }>
         <div className='App'>
           <Switch>
             <Route exact path={ publicPath } component={ HomePage } />

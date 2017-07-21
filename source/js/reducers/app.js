@@ -12,9 +12,9 @@ const initialState = {
 export default function(state = initialState, action) {
   switch (action.type) {
     case SEARCH_RESTAURANTS:
-      console.log(action.payload);
+
       return Object.assign({}, state, {
-        restaurants: action.payload.data
+        restaurants: state.restaurants.concat(action.payload.data.restaurants)
       })
       break;
   }
